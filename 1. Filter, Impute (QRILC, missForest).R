@@ -6,9 +6,9 @@ library(missForest)
 library(dplyr)
 
 # 设置工作目录
-setwd("D:/Final Report/6500")
+setwd("D:/Final Report")
 
-filePath <- file.path(paste0("proteinGroups_6500.txt"))
+filePath <- file.path(paste0("proteinGroups.txt"))
 # read the protein groups data and change the " " in the header into "."
 PG <- read.delim(filePath, header = TRUE, stringsAsFactors = FALSE, na.strings = "") %>%
   setNames(gsub(" ", ".", names(.)))
