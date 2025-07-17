@@ -191,7 +191,7 @@ for (cont in contrast){
     
     plot_title <- paste0(substr(cont,1,15), " GO ", switch(anno, BP="Biological Process",MF="Molecular Function",CC="Cellular Component"), " Enrichment Analysis")
     plot_subtitle <- paste0(reg_direction," | Significant genes: ", length(gene_list)," | Top ", nrow(results_df), " pathways")
-    plot_save_path <- file.path("GO enrichment", paste0(cont, "_GO_",anno,"_dotplot.pdf"))
+    plot_save_path <- paste0(cont, "_GO_",anno,"_dotplot.pdf")
 
     drawDotplot(
       df = results_df,
